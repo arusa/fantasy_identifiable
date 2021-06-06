@@ -3,7 +3,7 @@ require "active_support/concern"
 require "faker"
 
 module FantasyIdentifiable
-  #class Error < StandardError; end
+  # class Error < StandardError; end
 
   extend ::ActiveSupport::Concern
 
@@ -51,7 +51,7 @@ module FantasyIdentifiable
 
   def set_friendly_identifier field_name
     identifier_with(field_name) do
-      friendly_token(20).downcase.tr("-_","ab")
+      friendly_token(20).downcase.tr("-_", "ab")
     end
   end
 
@@ -90,7 +90,7 @@ module FantasyIdentifiable
           Faker::Hacker.noun
         ]
       ).sample(3) +
-      [friendly_token(3).downcase.tr("-_","ab")]
+      [friendly_token(3).downcase.tr("-_", "ab")]
     ).join("-").delete(" ").downcase
   end
 end

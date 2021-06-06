@@ -15,8 +15,10 @@ end
 
 class MultiObject < ActiveRecord::Base
   include FantasyIdentifiable
-  identifiable({
-    friendly_name: :friendly,
-    identifier: :uuid
-  })
+  identifiable(
+    {
+      friendly_name: :friendly,
+      identifier: :uuid
+    }
+  )
 end
