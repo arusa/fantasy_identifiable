@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     fantasy_identifiable (0.1.0)
-      activerecord (> 6.1)
-      activesupport (> 6.1)
+      activerecord (>= 6.0.0)
+      activesupport (>= 6.0.0)
       faker
 
 GEM
