@@ -91,6 +91,6 @@ module FantasyIdentifiable
         ]
       ).sample(3) +
       [friendly_token(3).downcase.tr("-_", "ab")]
-    ).join("-").delete(" ").downcase
+    ).join("-").delete(" ").downcase.gsub!(/[^\-0-9A-Za-z]/, '')
   end
 end
