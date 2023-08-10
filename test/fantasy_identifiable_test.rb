@@ -31,4 +31,9 @@ class FantasyIdentifiableTest < Minitest::Test
     assert test_object.friendly_name.instance_of?(String)
     assert test_object.friendly_name.length == 20
   end
+
+  def test_identifier_is_not_overwritten
+    test_object = FriendlyObject.create(identifier: "test")
+    assert test_object.identifier == "test"
+  end
 end

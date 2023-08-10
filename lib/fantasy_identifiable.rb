@@ -14,6 +14,8 @@ module FantasyIdentifiable
 
   def generate_identifiers
     self.class.identifier_fields.each do |field_name, field_type|
+      next if self.identifier.present?
+
       case field_type
       when :friendly
         set_friendly_identifier field_name
